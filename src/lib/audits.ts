@@ -16,7 +16,7 @@ export async function createAudit(
   const works: Work[] = [];
   for (const [i, image] of images.entries()) {
     const workId = `w${i + 1}`;
-    const file = `${workId}.png`;
+    const file = `${workId}.jpg`;
     await saveImage(id, file, await neutralFrame(image.data));
     works.push({ id: workId, file });
   }
@@ -25,7 +25,7 @@ export async function createAudit(
   for (const [i, workId] of plan.variants.entries()) {
     const source = images[works.findIndex((w) => w.id === workId)].data;
     const variant = await makeVariant(source, i);
-    const file = `${workId}-variant.png`;
+    const file = `${workId}-variant.jpg`;
     await saveImage(id, file, variant.data);
     variants.push({ id: `v-${workId}`, kind: "variant", workId, file, change: variant.change });
   }

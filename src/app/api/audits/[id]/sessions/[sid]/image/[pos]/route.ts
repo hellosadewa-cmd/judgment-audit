@@ -1,4 +1,4 @@
-import { loadAudit, loadImage } from "@/lib/store.ts";
+import { imageType, loadAudit, loadImage } from "@/lib/store.ts";
 
 export const runtime = "nodejs";
 
@@ -11,6 +11,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   const data = item ? await loadImage(id, item.file) : null;
   if (!data) return new Response("Not found", { status: 404 });
   return new Response(new Uint8Array(data), {
-    headers: { "Content-Type": "image/png", "Cache-Control": "private, no-store" },
+    headers: { "Content-Type": imageType(item!.file), "Cache-Control": "private, no-store" },
   });
 }

@@ -124,7 +124,7 @@ export default function AuditAdmin({ params }: { params: Promise<{ id: string }>
               <h2 className="font-semibold">What changed in the controlled versions</h2>
               <ul className="mt-2 text-sm text-muted">
                 {variants.map((v) => (
-                  <li key={v.id}>• Piece {v.workId.slice(1)}: {v.change}. The work itself is pixel-identical.</li>
+                  <li key={v.id}>• Piece {v.workId.slice(1)}: {v.change}. The work itself is unchanged.</li>
                 ))}
               </ul>
             </section>

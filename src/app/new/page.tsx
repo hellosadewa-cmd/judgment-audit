@@ -3,6 +3,25 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+// Hosted functions accept about 4.5 MB per request, so 12 full-size images would not fit.
+// Reviewers see the work on a screen, where 1400 px on the long side is enough.
+const MAX_SIDE = 1400;
+
+async function shrink(file: File): Promise<Blob> {
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, MAX_SIDE / Math.max(bitmap.width, bitmap.height));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  const context = canvas.getContext("2d")!;
+  context.fillStyle = "#ffffff"; // transparent areas would otherwise turn black in JPEG
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  return new Promise((resolve, reject) =>
+    canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error("Could not read image"))), "image/jpeg", 0.85),
+  );
+}
+
 export default function NewAudit() {
   const router = useRouter();
   const [title, setTitle] = useState("");
@@ -16,7 +35,13 @@ export default function NewAudit() {
     setError(null);
     const form = new FormData();
     form.set("title", title);
-    files.forEach((f) => form.append("works", f));
+    try {
+      for (const f of files) form.append("works", await shrink(f), f.name);
+    } catch {
+      setError("One of the images could not be read. Use PNG, JPEG, or WebP.");
+      setBusy(false);
+      return;
+    }
     const response = await fetch("/api/audits", { method: "POST", body: form });
     const body = await response.json();
     if (!response.ok) {
