@@ -43,3 +43,6 @@ next-env.d.ts
 
 # local audit data (images and scores)
 /.data
+
+# test works (Korsa-owned, published on Dribbble; not redistributed here)
+/data-uji
