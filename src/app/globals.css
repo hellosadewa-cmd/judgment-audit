@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
+/* One fixed, neutral theme: the page around the work must not change between reviewers or devices. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f4f2;
+  --foreground: #1b1b1a;
+  --muted: #6b6b66;
+  --line: #deddd8;
+  --accent: #2f5bea;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
