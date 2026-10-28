@@ -10,6 +10,7 @@
     "test": "node --test --disable-warning=MODULE_TYPELESS_PACKAGE_JSON tests/*.test.ts"
   },
   "dependencies": {
+    "@meta-sam/parser": "0.1.0",
     "@neondatabase/serverless": "1.2.0",
     "next": "15.5.28",
     "openai": "^7.45.1",
