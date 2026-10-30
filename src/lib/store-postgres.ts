@@ -8,7 +8,7 @@ type Sql = NeonQueryFunction<false, false>;
 let sql: Sql | null = null;
 let ready: Promise<void> | null = null;
 
-async function db(): Promise<Sql> {
+export async function db(): Promise<Sql> {
   sql ??= neon(process.env.DATABASE_URL ?? process.env.POSTGRES_URL ?? "");
   ready ??= migrate(sql).catch((error) => {
     ready = null;
@@ -30,6 +30,13 @@ async function migrate(sql: Sql): Promise<void> {
     file text NOT NULL,
     data bytea NOT NULL,
     PRIMARY KEY (audit_id, file)
+  )`;
+  await sql`CREATE TABLE IF NOT EXISTS panel_votes (
+    panelist text NOT NULL,
+    pair_id text NOT NULL,
+    pick text NOT NULL,
+    created_at timestamptz NOT NULL DEFAULT now(),
+    PRIMARY KEY (panelist, pair_id)
   )`;
 }
 

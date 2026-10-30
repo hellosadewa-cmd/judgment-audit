@@ -1,0 +1,141 @@
+{
+  "seed": "HK-2026-001 judge-audit-1",
+  "drawSeed": "HK-2026-001 contra-12 2026-10-30",
+  "source": "Contra Labs, creative-ad-design-dataset (huggingface.co/datasets/contralabs/creative-ad-design-dataset), CC BY 4.0. Images resized to 1080 px.",
+  "designs": [
+    {
+      "id": "d1",
+      "brand": "Pixel Forge",
+      "brief": "Product: Mechanical Keyboard — Low-profile hot-swappable mechanical keyboard in an aluminum case.\nBrand personality: Tactile, Precise, Bold, Modern, Technical.\nAd archetype: Promotional / Offer\nModifiers: Urgency\nCategory and audience: Keyboard enthusiasts and creative pros\nColour palette: Primary — Graphite #41454C\nSecondary — Cyan #3FA9C9\nBackground — Paper #F5F6F7\nSurface — Silver #E3E6E9\nText — Black Ink #1F2124\nAccent — Magenta #C24B86\nTypography: Space Grotesk (fallback Arial). Headlines Bold, UPPERCASE, +2 letter-spacing; body Regular; CTA Bold.",
+      "file": "/designs/pixel-forge.jpg"
+    },
+    {
+      "id": "d2",
+      "brand": "Camp Ivy",
+      "brief": "Product: Pop-Up Pet Tent — Compact pop-up pet tent in waxed cotton with a wooden pole frame.\nBrand personality: Playful, Natural, Sturdy, Warm, Modern.\nAd archetype: Lifestyle / In-Use\nCategory and audience: Design-forward pet gear for urban dog owners\nColour palette: Primary — Trail Green #4F7A5B\nSecondary — Canvas Brown #6B4A2F\nBackground — Bone #F4EFE6\nSurface — Oat #E4DAC7\nText — Pine Ink #232A24\nAccent — Amber #E0A73E\nTypography: Manrope (fallback Arial). Headlines Semibold, Title Case, +1 letter-spacing; body Regular; CTA Bold.",
+      "file": "/designs/camp-ivy.jpg"
+    },
+    {
+      "id": "d3",
+      "brand": "Loomcraft",
+      "brief": "Product: Washed Linen Duvet — Stonewashed linen duvet cover, softly folded.\nBrand personality: Cozy, Natural, Crafted, Calm, Considered.\nAd archetype: Social Proof\nCategory and audience: Bedding for people who care about sleep and texture\nColour palette: Primary — Terracotta #B97355\nSecondary — Sage #7E9174\nBackground — Linen White #F7F3EC\nSurface — Oat #E7DCCB\nText — Umber #2A2420\nAccent — Dusty Blue #7A96A8\nTypography: EB Garamond (fallback Georgia). Headlines Medium, Title Case, +1 letter-spacing; body Regular; CTA Semibold.",
+      "file": "/designs/loomcraft.jpg"
+    },
+    {
+      "id": "d4",
+      "brand": "Halcyon",
+      "brief": "Product: Buckwheat Meditation Cushion — Buckwheat-filled meditation cushion (zafu) in a linen cover.\nBrand personality: Calm, Natural, Grounded, Warm, Considered.\nAd archetype: Lifestyle / In-Use\nCategory and audience: Meditation and calm-space essentials for mindful routines\nColour palette: Primary — Forest Sage #4F6B52\nSecondary — Clay #B06B4C\nBackground — Oat #F5F1E8\nSurface — Almond #E8DCC8\nText — Bark #262019\nAccent — Dusty Blue #6E8FA6\nTypography: Fraunces (fallback Georgia). Headlines Medium, Title Case, +1 letter-spacing; body Regular; CTA Semibold.",
+      "file": "/designs/halcyon.jpg"
+    },
+    {
+      "id": "d5",
+      "brand": "Nord Audio",
+      "brief": "Product: ANC Wireless Headphones — Over-ear active-noise-cancelling headphones in machined aluminum.\nBrand personality: Precise, Minimal, Premium, Technical, Quiet.\nAd archetype: Hero Launch\nCategory and audience: Design-minded listeners who want premium quiet\nColour palette: Primary — Graphite #3A3F45\nSecondary — Steel Blue #5A7A94\nBackground — Fog #F4F6F7\nSurface — Mist Gray #E4E8EA\nText — Onyx #202327\nAccent — Signal Orange #E07B3C\nTypography: Sora (fallback Arial). Headlines Semibold, UPPERCASE, +1 letter-spacing; body Regular; CTA Bold.",
+      "file": "/designs/nord-audio.jpg"
+    },
+    {
+      "id": "d6",
+      "brand": "Cove",
+      "brief": "Product: Cold-pressed juice cleanse pack — Cold-pressed juice cleanse pack..\nBrand personality: Bold, Energetic, Confident, Direct.\nAd archetype: Promotional / Offer\nCategory and audience: Functional & Fitness — Health-conscious\nColour palette: Primary — Teal #2AB965\nSecondary — Citron #C8A53D\nBackground — Mist #F5F4F6\nSurface — Haze #E3DEE6\nText — Ink #1E1821\nAccent — Amber #BB7A1D\nTypography: headline set in a refined contemporary serif. Body and CTA type are your call: make sure they pair nicely and keep them balanced, on brand, and legible.\nNotes: The logo should stay intact. Optionally, if your layout prefers an all-white or all-black logo, go for it so long as it keeps its distinct form/shape(s).",
+      "file": "/designs/cove.jpg"
+    },
+    {
+      "id": "d7",
+      "brand": "Rooted",
+      "brief": "Product: Daily Greens Powder — Daily greens powder in a resealable matte pouch.\nBrand personality: Vital, Clean, Green, Honest, Modern.\nAd archetype: Hero Launch\nCategory and audience: Daily greens for wellness-minded adults\nColour palette: Primary — Kale #3E6B45\nSecondary — Beet #8E3B54\nBackground — Chalk #F6F5EF\nSurface — Celery Mist #E4EAD6\nText — Charcoal #242621\nAccent — Citrus #D7B24A\nTypography: Mulish (fallback Arial). Headlines Bold, Title Case, +0 letter-spacing; body Regular; CTA Bold.",
+      "file": "/designs/rooted.jpg"
+    },
+    {
+      "id": "d8",
+      "brand": "Terra Nova",
+      "brief": "Product: Whole-Food Protein Bar — Whole-food protein bar in a matte kraft wrapper.\nBrand personality: Vital, Honest, Energizing, Natural, Modern.\nAd archetype: Promotional / Offer\nModifiers: Urgency\nCategory and audience: Whole-food energy bars for active people\nColour palette: Primary — Cacao #5A3A2C\nSecondary — Moss Green #5E7B45\nBackground — Oat #F5F0E5\nSurface — Almond #E9DCC6\nText — Bark #26201A\nAccent — Berry #9B3A50\nTypography: Chivo (fallback Arial). Headlines Bold, UPPERCASE, +1 letter-spacing; body Regular; CTA Bold.",
+      "file": "/designs/terra-nova.jpg"
+    },
+    {
+      "id": "d9",
+      "brand": "Atlas & Oak",
+      "brief": "Product: Waxed Field Jacket — Waxed canvas field jacket on a hanger.\nBrand personality: Rugged, Premium, Timeless, Crafted, Modern.\nAd archetype: Lifestyle / In-Use\nCategory and audience: Heritage-modern menswear for design-conscious men\nColour palette: Primary — Field Olive #6E7150\nSecondary — Waxed Brown #4A3A29\nBackground — Warm Ivory #F5F1E7\nSurface — Canvas Tan #DED2BB\nText — Bark #2B271F\nAccent — Brass #B4894C\nTypography: Lora (fallback Georgia). Headlines Medium, Title Case, +1 letter-spacing; body Regular; CTA Semibold.",
+      "file": "/designs/atlas-oak.jpg"
+    },
+    {
+      "id": "d10",
+      "brand": "Lumè",
+      "brief": "Product: 10% Vitamin C Serum — Stabilized vitamin C brightening serum in a frosted glass dropper bottle.\nBrand personality: Clinical, Minimal, Radiant, Precise, Premium.\nAd archetype: Hero Launch\nCategory and audience: Clinical-clean skincare for results-driven women 25-45\nColour palette: Primary — Amber Glow #E4A64C\nSecondary — Rose Clay #C0705F\nBackground — Porcelain #FAF6F0\nSurface — Blush Mist #F0E4DE\nText — Espresso #2A2320\nAccent — Sage #7E9A79\nTypography: Cormorant Garamond (fallback Georgia). Headlines Medium, Title Case, +1 letter-spacing; body Regular; CTA Semibold.",
+      "file": "/designs/lume.jpg"
+    },
+    {
+      "id": "d11",
+      "brand": "Grove Press",
+      "brief": "Product: Cold-Pressed Olive Oil — Single-estate cold-pressed olive oil in a dark glass bottle.\nBrand personality: Honest, Rustic, Premium, Warm, Crafted.\nAd archetype: Promotional / Offer\nModifiers: Urgency\nCategory and audience: Home cooks who care about provenance\nColour palette: Primary — Olive #6F7A3E\nSecondary — Terra #A65E3A\nBackground — Linen #F6F2E8\nSurface — Wheat #E7DCC3\nText — Bark #26251E\nAccent — Lemon #D8B24A\nTypography: Bitter (fallback Georgia). Headlines Semibold, Title Case, +0 letter-spacing; body Regular; CTA Semibold.",
+      "file": "/designs/grove-press.jpg"
+    },
+    {
+      "id": "d12",
+      "brand": "Meridian",
+      "brief": "Product: Merino Runner — Merino-knit running sneaker with a foam midsole.\nBrand personality: Sleek, Technical, Light, Modern, Confident.\nAd archetype: Hero Launch\nCategory and audience: Everyday performance footwear for city runners\nColour palette: Primary — Cloud Gray #8D949B\nSecondary — Ink Navy #2A3550\nBackground — Chalk White #F7F8F9\nSurface — Ash #E5E8EB\nText — Carbon #202225\nAccent — Volt #B7D24B\nTypography: Outfit (fallback Arial). Headlines Bold, UPPERCASE, +1 letter-spacing; body Regular; CTA Bold.",
+      "file": "/designs/meridian.jpg"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "p1",
+      "a": "d5",
+      "b": "d11"
+    },
+    {
+      "id": "p2",
+      "a": "d11",
+      "b": "d10"
+    },
+    {
+      "id": "p3",
+      "a": "d10",
+      "b": "d8"
+    },
+    {
+      "id": "p4",
+      "a": "d8",
+      "b": "d6"
+    },
+    {
+      "id": "p5",
+      "a": "d6",
+      "b": "d1"
+    },
+    {
+      "id": "p6",
+      "a": "d1",
+      "b": "d9"
+    },
+    {
+      "id": "p7",
+      "a": "d9",
+      "b": "d3"
+    },
+    {
+      "id": "p8",
+      "a": "d3",
+      "b": "d4"
+    },
+    {
+      "id": "p9",
+      "a": "d4",
+      "b": "d7"
+    },
+    {
+      "id": "p10",
+      "a": "d7",
+      "b": "d2"
+    },
+    {
+      "id": "p11",
+      "a": "d2",
+      "b": "d12"
+    },
+    {
+      "id": "p12",
+      "a": "d12",
+      "b": "d5"
+    }
+  ]
+}
