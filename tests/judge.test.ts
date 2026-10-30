@@ -115,3 +115,34 @@ test("a composite keeps the design's pixels exactly, and a touched design fails 
   assert.equal((await designIntact(touched, design, box)).intact, false);
   await assert.rejects(compositeDesign(scene, design, { ...box, left: 300 }));
 });
+
+test("panel votes are checked against the frozen pairs and relabelled anonymously", async () => {
+  const { promises: fs } = await import("node:fs");
+  const path = await import("node:path");
+  const os = await import("node:os");
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), "panel-"));
+  const cwd = process.cwd();
+  process.chdir(dir);
+  try {
+    delete process.env.DATABASE_URL;
+    delete process.env.POSTGRES_URL;
+    const { auditSet, checkVote, saveVote, listVotes } = await import("../src/lib/panel.ts");
+    const pair = auditSet.pairs[0];
+    const a = "11111111-1111-4111-8111-111111111111";
+    const b = "22222222-2222-4222-8222-222222222222";
+    assert.equal(checkVote({ panelist: a, pairId: pair.id, pick: pair.a }), null);
+    assert.match(checkVote({ panelist: "Budi", pairId: pair.id, pick: pair.a })!, /panelist/);
+    assert.match(checkVote({ panelist: a, pairId: "p99", pick: pair.a })!, /pair/);
+    assert.match(checkVote({ panelist: a, pairId: pair.id, pick: "d99" })!, /Pick one/);
+    await saveVote({ panelist: b, pairId: pair.id, pick: pair.b });
+    await saveVote({ panelist: a, pairId: pair.id, pick: pair.b });
+    await saveVote({ panelist: a, pairId: pair.id, pick: pair.a }); // replaces the previous vote
+    assert.deepEqual(await listVotes(), [
+      { panelist: "P1", pairId: pair.id, pick: pair.b },
+      { panelist: "P2", pairId: pair.id, pick: pair.a },
+    ]);
+  } finally {
+    process.chdir(cwd);
+    await fs.rm(dir, { recursive: true, force: true });
+  }
+});

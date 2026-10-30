@@ -4,6 +4,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { buildJudgeReport } from "@/lib/judge-stats";
 import { findings } from "@/lib/judge-findings";
+import { listVotes } from "@/lib/panel";
 import { CRITERIA, type JudgeAudit, type JudgeReport } from "@/lib/judge-types";
 
 export const dynamic = "force-dynamic";
@@ -35,6 +36,8 @@ export default async function JudgeReportPage({ searchParams }: { searchParams: 
       </main>
     );
 
+  // The real audit takes the designer panel's live votes; simulated data carries its own simulated panel.
+  if (!audit.simulated) audit.panel = await listVotes();
   const report = buildJudgeReport(audit);
   const f = findings(report);
 
