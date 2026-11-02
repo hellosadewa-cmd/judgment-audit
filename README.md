@@ -29,7 +29,8 @@ The thresholds were fixed before any curator voted. The four signs come from the
 
 - `/niche/korsa`: Korsa's own test on 10 published landing page shots, with every original next to the AI version, the brief, the curators' votes, and the verdict.
 - `/curate/korsa`: where curators judge the Korsa test. No names are collected.
-- `/try`: run the test live on one of your own works. Your image is not stored. Live runs are capped per day because each one spends model credits.
+- `/try`: run the test live on one of your own works. Your image is not stored. Live runs are capped per day because each one spends model credits; when they cannot run, the page offers a run recorded during Korsa's test.
+- `/demo`: the demo video (2:44).
 
 ## Meta models
 
