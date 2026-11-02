@@ -3,7 +3,8 @@
 import niche from "@/data/niche-korsa.json";
 import { listCuration } from "@/lib/curation";
 import { replication } from "@/lib/niche";
-import { Verdict } from "../verdict";
+import criteria from "@/data/niche-korsa-criteria.json";
+import { Verdict, type LockedAnswers } from "../verdict";
 
 export const dynamic = "force-dynamic";
 
@@ -33,7 +34,7 @@ export default async function KorsaNiche() {
       <section className="mt-12">
         <h2 className="text-xl font-semibold">Verdict</h2>
         <div className="mt-4">
-          <Verdict rate={r.rate} note={r.curators < 3 ? "Fewer than 3 curators: an early signal only." : undefined} />
+          <Verdict rate={r.rate} locked={criteria as LockedAnswers} note={r.curators < 3 ? "Fewer than 3 curators: an early signal only." : undefined} />
         </div>
       </section>
 

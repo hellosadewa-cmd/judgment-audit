@@ -1,0 +1,10 @@
+{
+  "lockedAt": "2026-11-02",
+  "note": "Answered by Claude at the founder's request and locked by the founder before any curator voted. An assessment, not a measurement.",
+  "answers": {
+    "recurring": { "met": false, "reason": "Landing pages are usually bought once per launch." },
+    "consistency": { "met": false, "reason": "Each shot is a single image; Muse Image remade every one in a single pass." },
+    "standards": { "met": false, "reason": "No regulation or fixed format governs these pages." },
+    "local": { "met": false, "reason": "All ten works are in English with global themes." }
+  }
+}
