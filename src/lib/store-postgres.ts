@@ -38,6 +38,18 @@ async function migrate(sql: Sql): Promise<void> {
     created_at timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (panelist, pair_id)
   )`;
+  await sql`CREATE TABLE IF NOT EXISTS curation_votes (
+    niche text NOT NULL,
+    curator text NOT NULL,
+    work_id text NOT NULL,
+    acceptable boolean NOT NULL,
+    created_at timestamptz NOT NULL DEFAULT now(),
+    PRIMARY KEY (niche, curator, work_id)
+  )`;
+  await sql`CREATE TABLE IF NOT EXISTS live_tests (
+    id text PRIMARY KEY,
+    created_at timestamptz NOT NULL DEFAULT now()
+  )`;
 }
 
 export async function saveAudit(audit: Audit): Promise<void> {

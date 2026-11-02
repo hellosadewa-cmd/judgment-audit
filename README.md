@@ -1,57 +1,53 @@
-# Judgment Audit
+# Niche Test
 
-Audit an AI design judge before you trust it.
+If AI can remake your work in a minute, so can your client.
 
-AI models are starting to decide which design wins: in contests, agencies, and platforms. In Contra Labs' Design Crit study (June 2026), off-the-shelf AI judges agreed with a five-designer panel's majority on only 51–54% of choices between two designs, against 50% for a coin flip and 74% for designers. The same study found that a model can be consistent without being right.
+Creative studios, agencies, and freelancers are losing work to AI, and low-complexity design work goes first. The way through is to find a niche AI does not yet dominate, use AI as the tool to build it, and keep people in charge of what ships.
 
-Judgment Audit measures both. It audits Muse Spark as a judge of advertising designs, and the same test set can audit any vision model.
+Niche Test tells a studio whether its niche is still its own.
 
-> Built for the Meta Global AI Developer Hackathon 2026 (Indie track, "Build for Your World").
+> Built by Korsa Agency for the Meta Global AI Developer Hackathon 2026 (Indie track, "Build for Your World"). Korsa is the first studio to run the test on itself.
 
 ## How it works
 
-For 12 designs, each with its brief, the judge receives 96 standalone requests in a seeded random order:
+1. **AI tries to replicate the work.** Muse Spark reads a piece the studio sells and writes the brief a client would give. Muse Image makes the design from that brief alone, without seeing the original.
+2. **People curate.** Curators decide, piece by piece: would the AI version be acceptable to the same client?
+3. **A verdict.** The share of works AI replicated to a client's standard is combined with four signs of a niche AI cannot easily take:
+   - buyers have a recurring budget;
+   - the work must stay consistent across many assets;
+   - there is a standard, regulation, or fixed format;
+   - it depends on local language or context.
 
-| Test | What changes | What stays the same |
+| | 2 or more signs | Fewer than 2 |
 | --- | --- | --- |
-| Repeats | Nothing: the design is judged 3 times | Everything |
-| Settings | The design is shown in 3 presentation settings (frame, laptop screen, billboard) | The design's own pixels, checked by code |
-| Order | Two designs are compared in both orders | The two designs |
+| **AI replicates 50% or more** | Move up: sell the system, not the files | Leave this niche as a main product |
+| **AI replicates less than 50%** | Keep it and build on it, with AI as the tool | The edge is real; test the demand first |
 
-The judge scores each design from 1 to 5 on visual quality, fidelity to the brief, originality, and readiness for real use (the rubric of Contra Labs' Human Creativity Benchmark), and picks the stronger design in each pair. A panel of designers makes the same pair choices on `/panel`.
+The thresholds were fixed before any curator voted. The four signs come from the report "Bertahan di Pasar Aset Digital" (2026), section Q15.
 
-The report shows:
+## Pages
 
-- **Self-consistency:** how often a score changes when the same design is judged again.
-- **Setting shift:** how far the score moves when only the surroundings change, with a bootstrap 95% interval.
-- **Order effect:** how often the chosen design flips when the order is swapped.
-- **Agreement with designers:** how often the judge matches the panel's majority, next to how often each designer matches the rest of the panel.
-
-## The judge does not audit itself
-
-Every number is computed in code, and every sentence and recommendation in the report comes from fixed templates written before the audit ran. The audited model never writes or interprets its own results. Variants are checked pixel by pixel in code, not by a model.
+- `/niche/korsa`: Korsa's own test on 10 published landing page shots, with every original next to the AI version, the brief, the curators' votes, and the verdict.
+- `/curate/korsa`: where curators judge the Korsa test. No names are collected.
+- `/try`: run the test live on one of your own works. Your image is not stored. Live runs are capped per day because each one spends model credits.
 
 ## Meta models
 
 | Model | Role |
 | --- | --- |
-| SAM 3.1 (`sam-3.1`) | Finds where the design sits in each presentation scene |
-| Muse Image (`muse-image-1.0`) | Generates the presentation settings around the design |
-| Muse Spark (`muse-spark-1.3`) | The judge being audited |
+| Muse Spark (`muse-spark-1.3`) | Reads the work and writes the client's brief |
+| Muse Image (`muse-image-1.0`) | Makes the design from the brief alone |
 
-## Status
-
-The audit pipeline, statistics, report, and designer panel are built and tested. Muse Spark, SAM 3.1, and Muse Image have not been run on the audit set yet, so `/judge` says so instead of showing numbers. Results will be published exactly as measured.
-
-## Data and attribution
-
-The 12 designs and briefs come from Contra Labs' [creative-ad-design-dataset](https://huggingface.co/datasets/contralabs/creative-ad-design-dataset), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). They were drawn with a fixed seed (`scripts/import-contra.ts`) and resized to 1080 px (`scripts/prepare-designs.ts`). Reference figures come from Contra Labs' [Design Crit](https://contralabs.com/research/design-crit) and [Human Creativity Benchmark](https://contralabs.com/research/human-creativity-benchmark). The publisher sells evaluation services, and the studies are not peer reviewed.
-
-The designer panel collects no names. Each panelist is a random id kept in their own browser.
+Every number and verdict is computed in code from fixed rules. The models make the replica; people decide whether it is good enough.
 
 ## Built during the hackathon
 
-Everything in this repository was written during the hackathon, starting 28 October 2026. The commit history is the record of what was built and when. An earlier version audited human review teams; that flow (`/new`) is still in the code.
+Everything in this repository was written during the hackathon, starting 28 October 2026, and the commit history is the record. The project began as Judgment Audit, an audit of how consistently reviewers judge work. On 2 November it became Niche Test, after the founder concluded that auditing judges did not help a studio decide what to build. The earlier pages (`/judge`, `/panel`, `/new`) remain in the code but are no longer part of the product.
+
+## Data and attribution
+
+- Korsa's works are Korsa Agency's own published Dribbble shots.
+- The designs used by the earlier judge audit come from Contra Labs' [creative-ad-design-dataset](https://huggingface.co/datasets/contralabs/creative-ad-design-dataset) (CC BY 4.0).
 
 ## Development
 
@@ -61,6 +57,8 @@ npm test
 npm run dev
 ```
 
+`MODEL_API_KEY` must be set for `/try` and for `scripts/replicate.ts`.
+
 ## License
 
-Code: MIT. Designs in `public/designs`: CC BY 4.0, Contra Labs.
+Code: MIT. Korsa's works: © Korsa Agency, shown here for the test. Designs in `public/designs`: CC BY 4.0, Contra Labs.

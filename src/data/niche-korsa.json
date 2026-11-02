@@ -1,0 +1,102 @@
+{
+  "id": "korsa-landing",
+  "studio": "Korsa Agency",
+  "name": "Landing page portfolio shots",
+  "promptVersion": "2026-11-02.1",
+  "models": {
+    "brief": "muse-spark-1.3",
+    "image": "muse-image-1.0"
+  },
+  "works": [
+    {
+      "id": "19558954",
+      "title": "Online shop Kursiku - Landing page",
+      "url": "https://dribbble.com/shots/19558954-Online-shop-Kursiku-Landing-page",
+      "original": "/niche/korsa/19558954-original.jpg",
+      "ai": "/niche/korsa/19558954-ai.jpg",
+      "brief": "Design a homepage for a modern home furniture e-commerce brand KURSIKU.\n\nLayout top to bottom: 1. Minimal top navbar with logo left, links Home, Products, Newsfeed, Promo, search/cart icons, Sign Up text and black Login button right. 2. Large rounded hero banner with living-room photo. 3. Grey partner logo strip. 4. Centered 'Exclusive Furniture' section with subtitle and 4 rounded vertical cards: Living room, Bedroom, Workspace, Kitchen. 5. 'Our Features Special For You' heading.\n\nVisual style: clean minimalist Scandinavian, white space, rounded 12px corners, soft shadows.\n\nPalette: #FFFFFF background, #1E1E1E text/buttons, #9AA9B5 muted subtext, #E8E8E8 light grey, #C9A87A tan accent.\n\nTypography: modern geometric sans-serif, bold black headings, light regular body.\n\nImagery: bright photorealistic interiors, tan leather lounge chair, snake plant, floor lamp.\n\nHeadlines: 'Find the best home furniture for your room', 'Exclusive Furniture'",
+      "seconds": 25
+    },
+    {
+      "id": "24532745",
+      "title": "Ndalem - Real Estate Landing Page",
+      "url": "https://dribbble.com/shots/24532745-Ndalem-Real-Estate-Landing-Page",
+      "original": "/niche/korsa/24532745-original.jpg",
+      "ai": "/niche/korsa/24532745-ai.jpg",
+      "brief": "Create a photorealistic laptop mockup showing a luxury real estate homepage hero for 'Ndalem' buy/sell/rent platform. Layout top to bottom: dark studio background with centered laptop; website top nav with left hamburger + Buy/Sell/Rent pill buttons, center Ndalem logo, right Search Home search bar + profile icon; full-bleed hero photo; huge bottom-left headline; small subheadline below; circular Keep Scrolling badge bottom-right. Visual style: modern minimalist luxury, clean, high-end. Palette: charcoal black #121214, white #FFFFFF, sky blue #B9D0E8, stone grey #5A5E63, lawn green #7AB74A. Typography: bold geometric sans-serif, extra-large uppercase. Imagery: modern grey stone apartment buildings, glass balconies, green lawn, blue sky. Headline text: 'DREAM HOME' subtext 'Indulge in the Ultimate Luxury Living Experience with Our Exclusive Selection of Elegant and Comfortable Properties in the Most Prestigious Locations'",
+      "seconds": 22
+    },
+    {
+      "id": "25041821",
+      "title": "Roemah - Real Estate Landing Page",
+      "url": "https://dribbble.com/shots/25041821-Roemah-Real-Estate-Landing-Page",
+      "original": "/niche/korsa/25041821-original.jpg",
+      "ai": "/niche/korsa/25041821-ai.jpg",
+      "brief": "Create a desktop real estate homepage UI card for a property listings brand ROEMAH.\n\nLayout top to bottom: slim header with logo left, nav HOME FEATURED PROJECT SERVICE right; hero with small uppercase eyebrow 'FIND YOUR DREAM HOME WITH EASE', large two-line headline 'Discover The Best Properties With Stunning Architectural Designs'; full-bleed photo of large gray-shingle Craftsman house with white porch; floating orange circular badge with arrow overlapping image right; filter pills row: House [active] Apartment Townhouse Shop House; sub-headline 'Explore Our Top-Quality Listings And Find Your Perfect Home Today' with left/right carousel arrows; cropped property image strip below.\n\nStyle: clean minimal premium, white rounded card on light gray background, generous whitespace. Palette: #FFFFFF, #EDEEF0, #0A1025 navy-black, #E68A00 orange, #6B7280 gray. Typography: bold geometric sans logo/nav, elegant high-contrast serif headlines, clean sans body.",
+      "seconds": 24
+    },
+    {
+      "id": "25411962",
+      "title": "Virtulaw - Law Firm Landing Page",
+      "url": "https://dribbble.com/shots/25411962-Virtulaw-Law-Firm-Landing-Page",
+      "original": "/niche/korsa/25411962-original.jpg",
+      "ai": "/niche/korsa/25411962-ai.jpg",
+      "brief": "Create an agency website homepage for VirtuLaw, a website design and branding service for law firms.\n\nLayout top to bottom: sticky nav hero with full-bleed rounded office photo, left headline with dual pill buttons; About Us white section with centered paragraph plus three stats cards 50+, 20,000+, 10+; services row [01] Website Design; team strip 'Meet the Experts Behind the Success of VirtuLaw' with four headshot cards; reviews 'Empowering Legal Teams with Proven Solutions' with photo-left testimonial cards showing 45%, 60%, 50%; footer CTA 'Your Legal Solutions Just a Click Away'.\n\nStyle: clean minimal modern corporate, white space, rounded cards.\n\nColors: #FFFFFF, #101410, #F5F5F2, #E6ECE3, #2E3B30.\n\nType: modern sans-serif grotesk, large headline mixing regular with underlined italics.\n\nImagery: natural-light teamwork in plant office, professional diverse headshots.\n\nHeadline: 'Modern Websites. Smart Branding. Just for Law Firms.'",
+      "seconds": 44
+    },
+    {
+      "id": "25505237",
+      "title": "Karzone - Luxury Car Rental Landing Page",
+      "url": "https://dribbble.com/shots/25505237-Karzone-Luxury-Car-Rental-Landing-Page",
+      "original": "/niche/korsa/25505237-original.jpg",
+      "ai": "/niche/korsa/25505237-ai.jpg",
+      "brief": "Design a dark luxury homepage for Karzone, exotic car rental and sales.\n\nLayout top to bottom: slim pill navbar with links + yellow Contact Us button; hero with large black sports car in studio, small top meta text, headline; dual Rent a car / Buy a car bar; About Us large statement text block; brand selector; featured car showcase with yellow Jaguar F-Type R side view under giant JAGUAR text plus 450 / 280 / 2024 specs and View details; Popular Exotic & Luxury Rental Makes logo cards for Bugatti, Ferrari, Lamborghini, Jaguar, Bentley; bottom Superior Customer Service split with B&W top-down car photo.\n\nStyle: premium, minimal, high-contrast dark mode.\n\nPalette: #0B0B0B black, #1E1E1E charcoal, #FFFFFF white, #8A8A8A grey, #E5FF00 neon yellow accent.\n\nTypography: bold modern grotesk sans, large tight headlines, tiny uppercase labels.\n\nHeadlines: 'Rent the luxury Own the thrill.' 'Superior Customer Service'",
+      "seconds": 25
+    },
+    {
+      "id": "25614963",
+      "title": "Duwy - Personal Portfolio Website",
+      "url": "https://dribbble.com/shots/25614963-Duwy-Personal-Portfolio-Website",
+      "original": "/niche/korsa/25614963-original.jpg",
+      "ai": "/niche/korsa/25614963-ai.jpg",
+      "brief": "Create a desktop personal portfolio homepage for a UI/UX Product Designer named Duwy.\n\nLayout top to bottom: 1) Minimal top nav with logo left, links Personal, Business, Partner, About Us center, outlined pill Sign In button right. 2) Hero with oversized headline 'Product Designer' left, small vertical rounded photo top-right, small right-aligned intro 'Hi, I'm Duwy, A UI/UX Designer Creating Intuitive Digital Experiences.' 3) Horizontal client logo strip in light pill badges: coinbase, Spotify, zoom, slack, Dropbox. 4) About section with small 'About Me' pill, statement 'Design has always been more than just a job - it's my passion.'\n\nStyle: minimalist, clean editorial, airy whitespace, soft rounded corners.\n\nColors: #FFFFFF background, #0A0A0A text, #F5F5F4 pills, #E5E5E5 borders.\n\nTypography: modern grotesque sans, light huge display + small regular body.\n\nImagery: candid lifestyle photos, motion-blur woman by train.",
+      "seconds": 28
+    },
+    {
+      "id": "26617567",
+      "title": "Oasic - Creative Digital Agency Website",
+      "url": "https://dribbble.com/shots/26617567-Oasic-Creative-Digital-Agency-Website",
+      "original": "/niche/korsa/26617567-original.jpg",
+      "ai": "/niche/korsa/26617567-ai.jpg",
+      "brief": "Design a tilted overlapping website mockup collage on light gray background showcasing landing pages.\n\nForeground is creative design agency hero page: top bar with small mark left, nav Project, About, Service, Career center-right, red pill Contact button top-right. Mid hero with huge uppercase headline 'WE COMPLETE YOUR CREATIVE IDEAS' with red circle-arrow + 'LET'S TALK NOW' inline, small gray subcopy 'Oasic is a visionary design agency that breathes life into ideas and transforms them into extraordinary realities.' Vertical red 'Scroll Down' left edge. Bottom full-width rounded video banner with centered Play button.\n\nBackground peeking layers: law-firm, real-estate, and black agency pages with packaging photo.\n\nStyle: modern minimal, clean, bold, 3D perspective presentation.\n\nColors: #FFFFFF, #000000, #FF2A00, #E86A2C, #F2F2F2.\n\nType: bold condensed grotesque sans uppercase headline, regular sans body/nav.\n\nImagery: black silk photo with large orange gradient sun sphere.",
+      "seconds": 38
+    },
+    {
+      "id": "26725775",
+      "title": "Alibata - B2B E-Commerce Website",
+      "url": "https://dribbble.com/shots/26725775-Alibata-B2B-E-Commerce-Website",
+      "original": "/niche/korsa/26725775-original.jpg",
+      "ai": "/niche/korsa/26725775-ai.jpg",
+      "brief": "Design a desktop B2B ecommerce marketplace homepage hero for global wholesale trade.\n\nLayout top to bottom: slim top nav with logo left, links: All categories, Featured selections, Trade Assurance, Buyer Central, Help Center, Become a supplier, Sign in button and red Sign Up button; massive hero image full-bleed; headline overlay; white search bar with red Search button bottom-left; dark footer strip with 4 feature cards in a row.\n\nVisual style: modern minimal editorial, premium fashion-meets-logistics, clean, high-contrast.\n\nPalette: #121614 charcoal black, #FFFFFF white, #E11D25 signal red, #CABFAE warm taupe, #2FA968 emerald green.\n\nTypography: tall thin geometric sans-serif, ultra-light huge headline, small clean sans for body/nav.\n\nImagery: two diverse women in green blouses posing against stacked cardboard shipping boxes.\n\nHeadline text: 'The leading B2B Ecommerce — Platform For Global Trade'",
+      "seconds": 31
+    },
+    {
+      "id": "27693094",
+      "title": "Nero - Digital Banking Landing Page",
+      "url": "https://dribbble.com/shots/27693094-Nero-Digital-Banking-Landing-Page",
+      "original": "/niche/korsa/27693094-original.jpg",
+      "ai": "/niche/korsa/27693094-ai.jpg",
+      "brief": "Design a modern fintech neobank landing page, desktop long-scroll mockup presented as two vertical panels.\n\nTop: pill navbar with logo, Personal Business Features Security About, orange Login button. Hero: left eyebrow THE FUTURE OF BANKING, headline 'Banking, Built Around You.', right abstract macro glass edge with peach-orange gradient and dotted texture, white Open an Account pill.\n\nBelow: white logo strip Square, Ghost, Attentive, Rippling, Coinbase, Spotify, Dropbox. Coral stats block: '50K+ ACTIVE CUSTOMERS / $2.4B+ TRANSACTIONS PROCESSED / 99.99% PLATFORM UPTIME'. Footer tagline 'Everything your money needs. Nothing it doesn't.'\n\nRight panel: headline 'Everything your team needs to turn leads into loyal customers.', iPhone dashboard $143,227.30 and $100 transfer cards, security grid, 'Relied on by startups and enterprises' testimonial.\n\nStyle: minimal, clean, rounded-2xl, glassmorphism. Colors: #FF5B3E coral, #F6F3EC cream, #0F1F1E dark, #FFFFFF, #F1F2F4 grey. Typography: bold geometric grotesk sans, tight tracking, uppercase micro eyebrows.",
+      "seconds": 24
+    },
+    {
+      "id": "27721266",
+      "title": "Nexora - AI-Powered B2B E-Commerce Landing Page",
+      "url": "https://dribbble.com/shots/27721266-Nexora-AI-Powered-B2B-E-Commerce-Landing-Page",
+      "original": "/niche/korsa/27721266-original.jpg",
+      "ai": "/niche/korsa/27721266-ai.jpg",
+      "brief": "Design a B2B SaaS landing page for NEXORA, AI-powered B2B commerce platform.\n\nLayout top to bottom: 1. Dark olive hero with top nav logo, Platform, Solutions, Resources, Company, Sign In, geometric circle line art, pill 'AI-POWERED B2B COMMERCE', headline 'Sell smarter / Scale faster', subtext, buttons 'Book a Demo' 'Explore Platform', 3 glass dashboard cards Sales Overview $482,920, Inventory Insights +20%, Savings Goals $450.00. 2. White section pill, headline 'Built for every B2B workflow', 3 tabs with AI Generation active black, chat UI. 3. Beliefs section headline 'Better commerce starts with better decisions.' 3 icon columns. 4. Testimonial 'Built for businesses that think ahead.' with smiling man photo and quote. 5. Blog 'Ideas for building a smarter business.' with photo cards.\n\nStyle: clean minimal SaaS. Palette: #222E00, #6B8A00, #E8F0C0, #FFFFFF, #F4F5F2, #111111. Typography: modern sans grotesk, bold tight headlines, tiny uppercase pills. Imagery: line icons, business photos, dashboard UI.",
+      "seconds": 57
+    }
+  ]
+}

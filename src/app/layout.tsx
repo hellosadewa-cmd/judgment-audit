@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Judgment Audit",
-  description: "A 15-minute audit that shows a creative team how consistently it judges the same work.",
+  title: "Niche Test",
+  description: "If AI can remake your work in a minute, so can your client. Test your niche before you build on it.",
 };
 
 export default function RootLayout({
