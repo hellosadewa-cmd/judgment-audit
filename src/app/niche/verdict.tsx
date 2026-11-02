@@ -4,8 +4,17 @@
 import { useState } from "react";
 import { CRITERIA, REPLICATED_AT, STRONG_AT, VERDICTS, verdict, type CriterionId } from "@/lib/niche";
 
-export function Verdict({ rate, note }: { rate: number | null; note?: string }) {
-  const [met, setMet] = useState<Set<CriterionId>>(new Set());
+/** A studio's own answers, fixed in advance; the checklist then shows them read-only with the reason for each. */
+export interface LockedAnswers {
+  lockedAt: string;
+  note: string;
+  answers: Record<CriterionId, { met: boolean; reason: string }>;
+}
+
+export function Verdict({ rate, note, locked }: { rate: number | null; note?: string; locked?: LockedAnswers }) {
+  const [met, setMet] = useState<Set<CriterionId>>(
+    () => new Set(locked ? CRITERIA.filter((c) => locked.answers[c.id].met).map((c) => c.id) : []),
+  );
   const toggle = (id: CriterionId) =>
     setMet((prev) => {
       const next = new Set(prev);
@@ -18,22 +27,34 @@ export function Verdict({ rate, note }: { rate: number | null; note?: string }) 
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <div className="rounded-xl border border-line bg-white p-6">
-        <p className="font-medium">Does your niche meet these? Tick what applies.</p>
+        <p className="font-medium">
+          {locked ? `The studio's answers, locked on ${locked.lockedAt}` : "Does your niche meet these? Tick what applies."}
+        </p>
         <ul className="mt-4 space-y-3">
           {CRITERIA.map((c) => (
             <li key={c.id}>
-              <label className="flex cursor-pointer gap-3">
-                <input type="checkbox" checked={met.has(c.id)} onChange={() => toggle(c.id)} className="mt-1 h-4 w-4" />
+              <label className={`flex gap-3 ${locked ? "" : "cursor-pointer"}`}>
+                <input
+                  type="checkbox"
+                  checked={met.has(c.id)}
+                  disabled={Boolean(locked)}
+                  onChange={() => toggle(c.id)}
+                  className="mt-1 h-4 w-4"
+                />
                 <span>
-                  <span className="font-medium">{c.label}</span>
-                  <span className="block text-sm text-muted">{c.detail}</span>
+                  <span className="font-medium">
+                    {c.label}
+                    {locked && <span className="text-muted">: {locked.answers[c.id].met ? "yes" : "no"}</span>}
+                  </span>
+                  <span className="block text-sm text-muted">{locked ? locked.answers[c.id].reason : c.detail}</span>
                 </span>
               </label>
             </li>
           ))}
         </ul>
         <p className="mt-4 text-xs text-muted">
-          Criteria from &ldquo;Bertahan di Pasar Aset Digital&rdquo; (2026), Q15. Strong niche: {STRONG_AT} or more of 4.
+          {locked && `${locked.note} `}Criteria from &ldquo;Bertahan di Pasar Aset Digital&rdquo; (2026), Q15. Strong niche:{" "}
+          {STRONG_AT} or more of 4.
         </p>
       </div>
       <div className="rounded-xl border-2 border-foreground bg-white p-6">
