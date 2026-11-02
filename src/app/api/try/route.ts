@@ -18,11 +18,18 @@ async function takeSlot(): Promise<boolean> {
   return true;
 }
 
+/** Whether live tests can run here; the page offers a recorded run when they cannot. */
+export function GET() {
+  return Response.json({ live: Boolean(process.env.MODEL_API_KEY) });
+}
+
 export async function POST(request: Request) {
   const form = await request.formData();
   const file = form.get("work");
   if (!(file instanceof File) || !file.type.startsWith("image/") || file.size > MAX_BYTES)
     return Response.json({ error: "Upload one image, up to 4 MB." }, { status: 400 });
+  if (!process.env.MODEL_API_KEY)
+    return Response.json({ error: "Live tests are paused right now.", unavailable: true }, { status: 503 });
   try {
     if (!(await takeSlot()))
       return Response.json({ error: "Today's live tests are used up. Please try again tomorrow." }, { status: 429 });
