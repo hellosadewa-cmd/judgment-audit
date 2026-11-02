@@ -76,7 +76,7 @@ export default function Try() {
       <h1 className="mt-3 text-3xl font-semibold">Can AI remake one of your works from a brief?</h1>
       <p className="mt-4 max-w-3xl text-muted">
         Upload a piece you sell. Muse Spark writes the brief a client would give, and Muse Image makes the design from that
-        brief alone. It takes about half a minute. Your image is not stored.
+        brief alone. It takes under a minute. Your image is not stored.
       </p>
 
       <div className="mt-8 flex flex-wrap items-center gap-3">
