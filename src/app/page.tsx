@@ -32,6 +32,9 @@ export default function Home() {
         <Link href="/try" className="rounded-full border border-foreground px-6 py-3 font-medium">
           Test one of your works
         </Link>
+        <Link href="/demo" className="rounded-full border border-line px-6 py-3 font-medium text-muted">
+          Watch the demo
+        </Link>
       </div>
       <p className="mt-16 text-sm text-muted">
         Built by Korsa Agency with Meta Muse Spark and Muse Image. AI builds; people curate.
