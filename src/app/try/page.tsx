@@ -1,14 +1,20 @@
 "use client";
 
 // Live test on one work: upload it, let Muse Spark write the brief and Muse Image remake it, then judge the result.
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import niche from "@/data/niche-korsa.json";
 import { Verdict } from "../niche/verdict";
 
 interface Result {
   brief: string;
   image: string;
   seconds: number;
+  /** Set when showing a run recorded during Korsa's test instead of a live one. */
+  recorded?: string;
 }
+
+/** A real run from Korsa's test, shown when a live test cannot run. */
+const RECORDED = niche.works[0];
 
 export default function Try() {
   const [preview, setPreview] = useState<string | null>(null);
@@ -17,6 +23,22 @@ export default function Try() {
   const [result, setResult] = useState<Result | null>(null);
   const [acceptable, setAcceptable] = useState<boolean | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [live, setLive] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/try")
+      .then((r) => r.json())
+      .then((b) => setLive(Boolean(b.live)))
+      .catch(() => undefined);
+  }, []);
+
+  function showRecorded() {
+    setFile(null);
+    setPreview(RECORDED.original);
+    setResult({ brief: RECORDED.brief, image: RECORDED.ai, seconds: RECORDED.seconds, recorded: RECORDED.title });
+    setAcceptable(null);
+    setError(null);
+  }
 
   function choose(f: File | undefined) {
     if (!f) return;
@@ -36,7 +58,10 @@ export default function Try() {
       form.append("work", file);
       const response = await fetch("/api/try", { method: "POST", body: form });
       const body = await response.json();
-      if (!response.ok) throw new Error(body.error ?? "The test failed.");
+      if (!response.ok) {
+        if (body.unavailable) setLive(false);
+        throw new Error(body.error ?? "The test failed.");
+      }
       setResult(body);
     } catch (e) {
       setError((e as Error).message);
@@ -69,19 +94,33 @@ export default function Try() {
         {error && <p className="text-red-700">{error}</p>}
       </div>
 
+      {(!live || error) && (
+        <div className="mt-6 flex flex-wrap items-center gap-3 rounded-xl border border-line bg-white p-4">
+          <p className="text-muted">
+            {live ? "The live test did not finish." : "Live tests are paused right now."} You can still see a run recorded
+            during Korsa&apos;s test, made exactly the same way.
+          </p>
+          <button onClick={showRecorded} className="rounded-full border border-foreground px-5 py-2 font-medium">
+            See a recorded run
+          </button>
+        </div>
+      )}
+
       {preview && (
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <figure>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={preview} alt="Your work" className="w-full rounded-md border border-line" />
-            <figcaption className="mt-1 text-sm text-muted">Your work</figcaption>
+            <figcaption className="mt-1 text-sm text-muted">{result?.recorded ? `Original: ${result.recorded}, by Korsa` : "Your work"}</figcaption>
           </figure>
           <figure>
             {result ? (
               <>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={result.image} alt="AI version" className="w-full rounded-md border border-line" />
-                <figcaption className="mt-1 text-sm text-muted">Made by Muse Image from the brief in {result.seconds} s</figcaption>
+                <figcaption className="mt-1 text-sm text-muted">
+                  Made by Muse Image from the brief in {result.seconds} s{result.recorded && " (recorded on 2 November 2026)"}
+                </figcaption>
               </>
             ) : (
               <div className="flex aspect-[4/3] items-center justify-center rounded-md border border-dashed border-line text-muted">
