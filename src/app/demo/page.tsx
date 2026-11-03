@@ -6,8 +6,8 @@ export default function Demo() {
       <h1 className="mt-3 text-3xl font-semibold">Can AI already make what you sell?</h1>
       <video src="/video/niche-test.mp4" controls playsInline preload="metadata" className="mt-8 w-full rounded-xl border border-line bg-black" />
       <p className="mt-4 text-sm text-muted">
-        2 minutes 44 seconds. Korsa&apos;s verdict in the video comes from one curator and is marked as an early signal; the{" "}
-        <a href="/niche/korsa" className="underline">live report</a> updates as more designers vote.
+        2 minutes 48 seconds. Korsa&apos;s verdict in the video comes from 7 curators and 70 judgements, as of 3 November 2026;
+        the <a href="/niche/korsa" className="underline">live report</a> updates as more designers vote.
       </p>
     </main>
   );
